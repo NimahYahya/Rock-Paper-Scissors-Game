@@ -12,20 +12,41 @@
   </head>
   <body>
     <div class="game">
-      <div class="choose">choose</div>
+      <h1 class="choose">Press a button to play!</h1>
       <div class="btns">
-        <button class="rock">
+        <button class="rock" onclick="showDiv()">
           <i class="fas fa-hand-rock"></i>
         </button>
-        <button class="paper"><i class="fas fa-hand-paper"></i></button>
-        <button class="scissor"><i class="fas fa-hand-scissors"></i></button>
+        <button class="paper" onclick="showDiv()">
+          <i class="fas fa-hand-paper"></i>
+        </button>
+        <button class="scissor" onclick="showDiv()">
+          <i class="fas fa-hand-scissors"></i>
+        </button>
       </div>
 
-      <div class="computerChoise">The Computer chose :</div>
-
+      <h2 class="computerChoise">Computer choice:</h2>
+      <!-- computer random chioce -->
       <div id="computerPlay"></div>
 
+      <!-- result  -->
       <div id="result"></div>
+
+      <div class="scoreboard">
+        <div id="scoreboard">
+          <p class="scoreboard-item" id="playerWins">
+            <strong>Your Victories: </strong><span id="wins">0</span>
+          </p>
+          <p class="scoreboard-item" id="playerDraws">
+            <strong>Total Draws: </strong><span id="draws">0</span>
+          </p>
+          <p class="scoreboard-item" id="playerLosses">
+            <strong>Your defeats: </strong><span id="losses">0</span>
+          </p>
+        </div>
+      </div>
+
+      <p id="reset-scores">Play again</p>
     </div>
 
     <script src="./js/script.js"></script>

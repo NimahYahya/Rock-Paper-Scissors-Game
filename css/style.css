@@ -1,21 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: #f6f6f6;
+  color: rgb(238, 226, 226);
+  font-family: Monospace;
+  color: rgb(75, 69, 69);
+}
 .game {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 2.5%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(57, 62, 63);
+  width: 50vw;
+  padding: 25px;
+  margin: 5% auto;
+  border-radius: 3px;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(170deg, #ffca28, #ff3b80);
+  background-size: cover;
+  background-position: center;
 }
 
 .choose,
 .computerChoise {
-  font-family: "Bungee Outline", cursive;
-  font-size: 3rem;
   text-align: center;
-  color: rgb(238, 226, 226);
+  color: rgb(75, 69, 69);
+  padding: 10px;
+  letter-spacing: 1px;
 }
 
 #computerPlay,
@@ -25,28 +36,31 @@
 }
 
 #computerPlay .fas {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  margin: 1rem 0;
   color: rgb(123, 255, 0);
   background-color: rgb(65, 60, 60);
   padding: 1rem 1.2rem;
-  margin-right: 1rem;
-  border: 4px solid rgb(238, 226, 226);
-  border-radius: 3px;
-  box-shadow: 2px 2px 2px 0px rgba(168, 168, 168, 1);
+  border: 2px solid rgb(238, 226, 226);
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 0px rgba(51, 51, 51, 0.26);
 }
 
 button {
   transition: box-shadow 0.3s;
   padding: 1rem 1.2rem;
-  margin-right: 2rem;
+  margin: 1rem;
   background-color: rgb(65, 60, 60);
-  border: 4px solid rgb(238, 226, 226);
-  border-radius: 3px;
-  box-shadow: 2px 2px 2px 0px rgba(168, 168, 168, 1);
+  border: 2px solid rgb(238, 226, 226);
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 0px rgba(51, 51, 51, 0.26);
 }
+
 button:hover {
   cursor: pointer;
-  box-shadow: 4px 4px 6px 0px rgba(168, 168, 168, 1);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.185);
+  transition: all 0.3s;
 }
 
 button:focus {
@@ -54,19 +68,90 @@ button:focus {
 }
 
 button .fas {
-  font-size: 4rem;
+  font-size: 3rem;
   color: rgb(255, 0, 140);
 }
 
 #result {
-  font-family: "Gruppo", cursive;
-  margin-top: 1rem;
+  opacity: 0;
+  transition: opacity 1s linear;
+  margin: 2rem auto;
   text-align: center;
-  padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  font-weight: 700;
-  color: rgb(49, 43, 43);
-  background-color: rgb(238, 226, 226);
-  box-shadow: 4px 4px 6px 0px rgba(168, 168, 168, 1);
+  font-weight: 600;
+}
+
+.scoreboard {
+  margin: 10px 15px;
+  border-top: 1px solid rgb(230, 225, 235);
+  text-align: center;
+}
+
+.scoreboard-item {
+  display: inline-block;
+  padding: 20px 0;
+}
+
+#playerWins {
+  margin-right: 40px;
+}
+
+#playerLosses {
+  margin-left: 40px;
+}
+
+#reset-scores {
+  text-align: center;
+  margin: 10px auto;
+  width: 100px;
+  color: rgb(230, 225, 235);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1060px) {
+  #computerPlay .fas {
+    font-size: 2rem;
+  }
+  button .fas {
+    font-size: 2rem;
+  }
+  .choose,
+  .computerChoise {
+    font-size: 1.5rem;
+  }
+  .scoreboard-item {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .game {
+    padding: 10px;
+  }
+  #computerPlay .fas {
+    font-size: 1.5rem;
+  }
+  button .fas {
+    font-size: 1.5rem;
+  }
+  .choose,
+  .computerChoise {
+    font-size: 1rem;
+  }
+  .scoreboard-item {
+    font-size: 8px;
+    margin: 3px 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .game {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  #result {
+    font-size: 1rem;
+  }
 }
