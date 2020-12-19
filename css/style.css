@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 2.5%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(57, 62, 63);
+}
+
+.choose,
+.computerChoise {
+  font-family: "Bungee Outline", cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(238, 226, 226);
+}
+
+#computerPlay,
+.btns {
+  width: 100%;
+  text-align: center;
+}
+
+#computerPlay .fas {
+  font-size: 4rem;
+  color: rgb(123, 255, 0);
+  background-color: rgb(65, 60, 60);
+  padding: 1rem 1.2rem;
+  margin-right: 1rem;
+  border: 4px solid rgb(238, 226, 226);
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 0px rgba(168, 168, 168, 1);
+}
+
+button {
+  transition: box-shadow 0.3s;
+  padding: 1rem 1.2rem;
+  margin-right: 2rem;
+  background-color: rgb(65, 60, 60);
+  border: 4px solid rgb(238, 226, 226);
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 0px rgba(168, 168, 168, 1);
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0px rgba(168, 168, 168, 1);
+}
+
+button:focus {
+  outline: none;
+}
+
+button .fas {
+  font-size: 4rem;
+  color: rgb(255, 0, 140);
+}
+
+#result {
+  font-family: "Gruppo", cursive;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(49, 43, 43);
+  background-color: rgb(238, 226, 226);
+  box-shadow: 4px 4px 6px 0px rgba(168, 168, 168, 1);
+}
